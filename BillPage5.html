@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+<link rel="stylesheet" href="styles.css">
+</head>
+<body align=center><form onsubmit="last()">
+    <div class="final">
+    <h1 align=center>Your Bill</h1>
+    <label >Bill</label>
+    
+    <input type="text" id="bill" name="bill" ></input><br/><br/>
+    <label>GST</label>
+    <input type="text" id="gst" name="gst" ></input><br/><br/>
+    <label >Total Bill</label>
+    <input type="text" id="Tbill" name="Tbill" ></input><br/><br/>
+    <button align=center onclick="last()">CLick TO VIEW</button>
+    </form>
+</div>
+    <script>
+    function last()
+    {
+        event.preventDefault();
+        
+        let p=window.location.search.substr(8);
+        
+      
+        let d=parseFloat(p);
+        let GoodStax=d*(7/100);
+        let YourBill=GoodStax+d;
+        document.querySelector("#bill").value=d;
+        document.querySelector("#gst").value=GoodStax;
+        
+        document.querySelector("#Tbill").value=YourBill;
+    }
+    
+    </script>
+</body>
+</html>
