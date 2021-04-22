@@ -34,7 +34,7 @@
         let GoodStax=d*(7/100);
         let YourBill=GoodStax+d;
         document.querySelector("#bill").value=d;    //Display the Price
-        document.querySelector("#gst").value=GoodStax;//Display Gst
+        document.querySelector("#gst").value= math.round(GoodStax);//Display Gst
         
         document.querySelector("#Tbill").value=YourBill;//Total Bill Amount
     }
