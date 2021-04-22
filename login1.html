@@ -9,33 +9,33 @@
 </head>
 
 <body class ="bgcolr"align=center>
-    <h1 style="color:rgb(255, 0, 106)">Welcome to Murugan Cabs</h1>
+    <h1 style="color:rgb(255, 0, 106)">Welcome to Murugan Cabs</h1>             
     <h3 style="color:rgb(255, 0, 106)">!! A Destination For A New Millenium !!</h3>
-    <div class ="login">
+    <div class ="login">               <!-- opening css class -->
     <h2>Login Page</h2>
-    <form onsubmit="login()">
-        <label  align = center for="username">Username</label>
+    <form onsubmit="login()">           <!--calling script function-->
+        <label  align = center for="username">Username</label>   
         <input type="text" name="username" id="username"  placeholder="Enter your name"required autofocus/>
         <br/><br/>
         <label align= center for="password">Password</label>
         <input type="password" name="password" id="password"  placeholder="Enter the Password" required/>
         <br/><br/>
-        <button type="Submit" class="new">Submit</button>
+        <button type="Submit" class="new">Submit</button>  <!--Creating Buttom-->
       
     </form></div>
-    <script>
+    <script>     //Write java
     function login(){
-        event.preventDefault();
+        event.preventDefault();         //Prevents passing to next page 
        
-        let username=document.querySelector("#username").value;
-        let password=document.querySelector("#password").value;
+        let username=document.querySelector("#username").value;  //Get form values
+        let password=document.querySelector("#password").value;   //Get form values
         let one="siva";
         let two="abcd";
     
-    if(username==one && password== two)
+    if(username==one && password== two)                   //Validating Username and Password
     {
         alert("Login Success");
-        window.location.href = "cabtype2.html"
+        window.location.href = "cabtype2.html"             //Linking to next page
     }
     else{
         alert("Invalid data");
