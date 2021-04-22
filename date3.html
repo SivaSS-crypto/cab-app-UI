@@ -49,20 +49,20 @@
 			let amount = url.searchParams.get("price");
 
 		//	let amount = parseInt(window.location.search.substr(7));
-			alert(amount);
+			
 			let timeValue = document.querySelector("#time").value;
 			let timestr = timeValue.substr(0, 2);
 			let time = parseInt(timestr);
 			let checked = document.querySelector("#seniorcitizen").checked;
-			alert("check" + checked);
+			
 			if (checked) {
 				amount = amount / 2.0;
-				alert("Discount amount for Seniorcitizen" + amount);
+				alert(" FOr Senior Citizen 50% Discount :" + amount);
 			}
 
 			if (time >= 17 && time <= 20) {
-				alert("PeaK HouR");
-				amount = amount * 2;
+				alert(" Your Journey is On PeaK HouR  (Usual Fare*0.25)");
+				amount = amount * 0.25;
 				//window.location.href = "peakhour.html"
 
 			}
