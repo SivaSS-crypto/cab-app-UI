@@ -6,18 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css">           <!--linking with css class-->
 </head>
 <body align=center>
         <div class="box">
     <h1>Cab Types</h1>
-<table bgcolor="pink" align=center border="1">
+<table bgcolor="pink" align=center border="1">              <!-- Creating Table-->
         <thead bgcolor="powderblue">
-        <tr><th>Type</th><th>Price per Km(RS)</th></tr>
+        <tr><th>Type</th><th>Price per Km(RS)</th></tr>     <!--Table Head-->
         </thead>
         <tbody>
-        <tr><td>MICRO</td>
-        <td>10</td>
+        <tr><td>MICRO</td>          <!--First Row of Table-->
+        <td>10</td>                 <!--Second Row of Table-->
         </tr>
         <tr>
         <td>MINI</td>
@@ -37,7 +37,7 @@
             <form onsubmit= "select()">
                 
             <label align=center><b>Select Cab Type</b></label>
-            <select name="cabType" id="cabType" required>
+            <select name="cabType" id="cabType" required>               <!--Select the CabType-->
                 <option >--Select Cab Type--</option>
                 <option id="cabType" value="MICRO">MICRO</option>
                 <option  id="cabType" value="MINI">MINI</option>
@@ -46,7 +46,7 @@
         
             <br />
             <br />
-            <label align=center><b>Enter Distance:</b></label>
+            <label align=center><b>Enter Distance:</b></label>              <!--Label for Distance-->
             <input type="number" id="km" placeholder="Enter in km" required>
             <br />
             <br />
@@ -58,24 +58,24 @@
             function select()
             {
                 event.preventDefault();
-                let cab= document.querySelector("#cabType").value;
-                let distance=document.querySelector("#km").value;
-                
+                let cab= document.querySelector("#cabType").value;   //Get form values
+                let distance=document.querySelector("#km").value;    //Get form values
+                //Checking the Cab Types
                 if(cab=="MICRO")
                 {
-                    let price =10*distance;
+                    let price =10*distance;                     //Price for MICRO cab
                     alert(price);
                     window.location.href="date3.html?price=" + price;
                 }
                 if(cab=="MINI")
                 {
-                     let price=20*distance;
+                     let price=20*distance;                     //Price for MINI cab
                     alert(price);
                     window.location.href="date3.html?price=" + price;
                 }
                 if(cab=="PRIME")
                 {
-                    let price=30*distance;
+                    let price=30*distance;                      //Price for PRIME cab
                     alert(price);
                     window.location.href="date3.html?price=" + price;
                 }
