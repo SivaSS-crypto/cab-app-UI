@@ -6,12 +6,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="styles.css">				<!--linking with css class-->
 </head>
 
 <body align=center>
 	<div class="last">
-	<form onsubmit="use()">
+	<form onsubmit="use()">							<!--calling the use() function-->
 
 		<h2>BOOKING DATE</h2>
 		<label>Enter Journey Date</label>
@@ -23,16 +23,16 @@
 		<br />
 		<br />
 
-		<label>GST</label>
+		<label>GST</label>					<!--Creating label for gst-->
 		<input type="text" name="gst" id="gst" value="7%" readonly>
 		<p>Select the Senior Citizen If your age is above 60</p>
-		<input type="radio" name="SeniorCitizen" id="seniorcitizen" value="Y">Senior Citizen
+		<input type="radio" name="SeniorCitizen" id="seniorcitizen" value="Y">Senior Citizen		<!-- Radio Type Input-->
 		</input>
 		<br />
 		<br />
 		<label>GENDER</label>
 		<input type="radio" name="gender" id="male" value="M">Male
-		</input>
+		</input>											<!-- Radio Type Input-->
 		<input type="radio" name="gender" id="female" value="F">Female
 		</input>
 		<br/>
@@ -44,16 +44,15 @@
 	<script>
 		function use() {
 			event.preventDefault();
-			alert("Booked Successfully");
-			let url = new URL(window.location.href);
-			let amount = url.searchParams.get("price");
-
-		//	let amount = parseInt(window.location.search.substr(7));
+			alert("Booked Successfully");					// Alert for Success Booking
+			let url = new URL(window.location.href);			//Creating object to get the value form previous page
+			let amount = url.searchParams.get("price");			 //Search for value in previous page and assigning it to amount
 			
-			let timeValue = document.querySelector("#time").value;
-			let timestr = timeValue.substr(0, 2);
-			let time = parseInt(timestr);
-			let checked = document.querySelector("#seniorcitizen").checked;
+			let timeValue = document.querySelector("#time").value;		 //Getting form values
+			let timestr = timeValue.substr(0, 2);				//Get the substrings of time
+			let time = parseInt(timestr);					//converting string into integer
+			let checked = document.querySelector("#seniorcitizen").checked; //Checking for Senior Citizen
+
 			
 			if (checked) {
 				amount = amount / 2.0;
@@ -61,13 +60,15 @@
 			}
 
 			if (time >= 17 && time <= 20) {
+				//Condition for PeakHour
 				alert(" Your Journey is On PeaK HouR  (Usual Fare*0.25)");
 				amount = amount * 0.25;
-				//window.location.href = "peakhour.html"
+				
 
 			}
 			alert("Your final amount " + amount);
-				window.location.href = "BillPage4.html?amount=" + amount;
+				window.location.href = "BillPage4.html?amount=" + amount; ////Passing the amount to BillPage
+
 			
 		
 		}
