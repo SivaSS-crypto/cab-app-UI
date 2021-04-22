@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+<link rel="stylesheet" href="styles.css">
+</head>
+<body align=center>
+        <div class="box">
+    <h1>Cab Types</h1>
+<table bgcolor="pink" align=center border="1">
+        <thead bgcolor="powderblue">
+        <tr><th>Type</th><th>Price per Km(RS)</th></tr>
+        </thead>
+        <tbody>
+        <tr><td>MICRO</td>
+        <td>10</td>
+        </tr>
+        <tr>
+        <td>MINI</td>
+        <td>20</td>
+        </tr>
+        <tr>
+        <td>PRIME</td>
+        <td>30</td>
+        </tr>
+        
+        </tbody>
+        </table>
+        <br/>
+        
+        
+
+            <form onsubmit= "select()">
+                
+            <label align=center><b>Select Cab Type</b></label>
+            <select name="cabType" id="cabType" required>
+                <option >--Select Cab Type--</option>
+                <option id="cabType" value="MICRO">MICRO</option>
+                <option  id="cabType" value="MINI">MINI</option>
+                <option id="cabType" value="PRIME">PRIME</option>
+            </select>
+        
+            <br />
+            <br />
+            <label align=center><b>Enter Distance:</b></label>
+            <input type="number" id="km" placeholder="Enter in km" required>
+            <br />
+            <br />
+            
+            <button  style="color:rgba(226, 60, 10, 0.973)"  align=center onclick=select()>Next</button>
+            </form>
+        </div>
+            <script>
+            function select()
+            {
+                event.preventDefault();
+                let cab= document.querySelector("#cabType").value;
+                let distance=document.querySelector("#km").value;
+                
+                if(cab=="MICRO")
+                {
+                    let price =10*distance;
+                    alert(price);
+                    window.location.href="date4.html?price=" + price;
+                }
+                if(cab=="MINI")
+                {
+                     let price=20*distance;
+                    alert(price);
+                    window.location.href="date4.html?price=" + price;
+                }
+                if(cab=="PRIME")
+                {
+                    let price=30*distance;
+                    alert(price);
+                    window.location.href="date4.html?price=" + price;
+                }
+               
+              
+                
+                
+            }
+                </script>
+        </body>
+    
+</body>
+</html>

@@ -1,0 +1,71 @@
+.login{
+    border-style:solid;
+    border:5px solid red;
+    border-radius:25px;
+    height:220px;
+    width:450px;
+    position :relative;
+    left: 440px;
+    top:100px;
+
+    color:green;
+    background-color: wheat;
+
+}
+.new{
+    background-color:greenyellow;
+    color: blue;
+}
+.bgcolr{
+    background-color:skyblue;
+    position: relative;
+    animation-name:example;
+    animation-duration:5s;
+}
+
+@keyframes example{
+
+}
+.sign{
+    color:black;
+    background-color: pink;
+}
+.box{
+    border-style: solid;
+    border:7px solid rgb(0, 255, 85);
+    border-radius:20px;
+    height:400px;
+    width:300px;
+    position:relative;
+    left:520px;
+    top:100px;
+    background-color: cornflowerblue;
+
+
+}
+.final{
+    border-style:solid;
+    border:5px solid rgb(231, 209, 5);
+    border-radius:25px;
+    height:300px;
+    width:600px;
+    position :relative;
+    left: 400px;
+    top:100px;
+    background-color: rgb(155, 245, 245);
+
+}
+.last{
+    border-style:solid;
+    border:5px solid violet;
+    border-radius:25px;
+    height:400px;
+    width:450px;
+    position :relative;
+    left: 440px;
+    top:100px;
+    
+    color:rgb(59, 199, 187);
+    background-color: rgb(248, 245, 239);
+
+}
