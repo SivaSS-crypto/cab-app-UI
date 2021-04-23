@@ -33,7 +33,7 @@
         let d=parseFloat(p);                        //Convert String to Float
         let GoodStax=d*(7/100);
         let YourBill=GoodStax+d;
-        document.querySelector("#bill").value=d;    //Display the Price
+        document.querySelector("#bill").value=Math.round(d);    //Display the Price
         document.querySelector("#gst").value= Math.round(GoodStax);//Display Gst
         
         document.querySelector("#Tbill").value=Math.round(YourBill);//Total Bill Amount
